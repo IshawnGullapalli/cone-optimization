@@ -3,6 +3,7 @@ This Python project was built using the [DEAP](https://github.com/deap/deap) evo
 
 ### Files
 This repository contains one Python file and one image file, "cones.py" and "objective_space.png". In the "cones.py" file, we aim to generate a set of cones with maximal volume and minimal surface area. The "objective_space.png" file, shown below, is a plot of the volumes and surface areas of possible solutions. ![](https://raw.githubusercontent.com/IshawnGullapalli/cone-optimization/main/objective_space.png)
+
 The data points in green are Pareto optimal. The data points in black are simply other solutions which are not optimal.
 
 ### The Process
