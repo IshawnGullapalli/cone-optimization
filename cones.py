@@ -23,14 +23,35 @@ toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 
 
 def calculate_volume(r, h):
+    """
+    This function calculates the volume of a cone.
+
+    :param r: radius
+    :param h: height
+    :return: volume of cone
+    """
     return pi * (r ** 2) * (h / 3)
 
 
 def calculate_surface_area(r, h):
+    """
+    This function calculates the surface area of a cone.
+
+    :param r: radius
+    :param h: height
+    :return: surface area of cone
+    """
     return pi * r * (r + ((h ** 2) + (r ** 2)) ** 0.5)
 
 
 def evaluate_fitness(individual):
+    """
+    This function calculates the fitness score of an individual. The fitness score is simply a tuple containing the
+    volume and surface area of a cone. The function also plots the current individual.
+
+    :param individual: the current individual
+    :return: a tuple (volume, surface area)
+    """
     r, h = individual[0], individual[1]
     volume = calculate_volume(r, h)
     surface_area = calculate_surface_area(r, h)
@@ -39,6 +60,14 @@ def evaluate_fitness(individual):
 
 
 def crossover(ind1, ind2):
+    """
+    This function returns two children made from the two individuals passed in as arguments. The children are found by
+    swapping the values of the two parents.
+
+    :param ind1: the first parent
+    :param ind2: the second parent
+    :return: a tuple containing two individuals representing the children
+    """
     r1 = ind1[0]
     h1 = ind1[1]
     ind1[0] = ind2[0]
